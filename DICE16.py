@@ -544,7 +544,7 @@ if Run_as_DICE16 == True:
 	#estimate SCC as in DICE16: scc(t) = -1000*eeq.m(t)/(.00001+cc.m(t));
 	scc_RUN = True
 	if scc_RUN == True:
-		cond16 = sqlite3.connect(r'/Users/ab/OneDrive - IIASA/TG_model/model_for_artem/model+DICE_v1/DAE/DICE2016R-091916ap_results.db')
+		cond16 = sqlite3.connect('DICE2016R-091916ap_results.db')
 		# pandas.read_sql('select * from loc', con)
 		cursor = cond16.cursor()
 		cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
